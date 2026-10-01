@@ -30,7 +30,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05}
 .section{padding:clamp(90px,14vw,200px) var(--pad)}
 
 /* animated underline link */
-.link{position:relative;display:inline-block;padding-bottom:6px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.link{position:relative;display:inline-block;padding-bottom:6px;font-size:.78rem;letter-spacing:.18em;}
 .link::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform-origin:right;transition:transform .8s var(--ease)}
 .link:hover::after{animation:ul 1s var(--ease)}
 @keyframes ul{0%{transform:scaleX(1);transform-origin:right}49%{transform:scaleX(0);transform-origin:right}50%{transform:scaleX(0);transform-origin:left}100%{transform:scaleX(1);transform-origin:left}}
