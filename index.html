@@ -139,17 +139,66 @@ button.ph{display:block;width:100%;border:0;padding:0;background:none;cursor:poi
 .work-foot{margin-top:clamp(70px,10vw,140px);text-align:center}
 
 /* ============ 5. APPROACH ============ */
-.approach{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:clamp(90px,12vw,180px) var(--pad)}
-.approach .bg{position:absolute;inset:-12% 0;opacity:.22}
-.approach .bg img{filter:grayscale(1)}
-.approach .in{position:relative;z-index:2;width:100%}
-.approach h2{font-size:clamp(2.8rem,9vw,10rem);line-height:.95;letter-spacing:.01em}
-.approach h2 span{display:block;opacity:0;transform:translateY(50px);transition:opacity 1.6s var(--ease),transform 1.6s var(--ease)}
-.approach h2 span:nth-child(2){padding-left:12vw;color:var(--g1)}
-.approach h2 span:nth-child(3){padding-left:4vw}
-.approach h2.in span{opacity:1;transform:none}
-.approach h2.in span:nth-child(2){transition-delay:.35s}.approach h2.in span:nth-child(3){transition-delay:.7s}
-.approach p{max-width:30em;margin:clamp(40px,6vw,90px) 0 0 auto;color:var(--light);font-size:1.05rem}
+.approach{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding:clamp(90px,12vw,180px) var(--pad);
+    background:#1F1F1F;
+}
+
+.approach .in{
+    position:relative;
+    z-index:2;
+    width:100%;
+}
+
+.approach h2{
+    font-size:clamp(2.8rem,9vw,10rem);
+    line-height:.95;
+    letter-spacing:.01em;
+}
+
+.approach h2 span{
+    display:block;
+    opacity:0;
+    transform:translateY(50px);
+    transition:
+        opacity 1.6s var(--ease),
+        transform 1.6s var(--ease);
+}
+
+.approach h2 span:nth-child(2){
+    padding-left:12vw;
+    color:var(--g1);
+}
+
+.approach h2 span:nth-child(3){
+    padding-left:4vw;
+}
+
+/* Плавна поява */
+.approach h2.in span{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.approach h2.in span:nth-child(2){
+    transition-delay:.35s;
+}
+
+.approach h2.in span:nth-child(3){
+    transition-delay:.7s;
+}
+
+.approach p{
+    max-width:30em;
+    margin:clamp(40px,6vw,90px) 0 0 auto;
+    color:var(--light);
+    font-size:1.05rem;
+}
 
 /* ============ 6. REVIEWS ============ */
 #reviews{
