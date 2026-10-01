@@ -411,13 +411,39 @@ const step=()=>tr.querySelector('.q').getBoundingClientRect().width+parseFloat(g
 document.getElementById('next').onclick=()=>tr.scrollBy({left:step(),behavior:'smooth'});
 document.getElementById('prev').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});
 
-/* Галерея серій. Перше фото в масиві — обкладинка. Додавайте/міняйте посилання тут */
-const d=id=>'https://drive.google.com/uc?export=view&id='+id;
-const WORKS=[
-  [d('1clc62Amb2TA475zO5gVEis0IzQncGBkn'),d('19qUm5lHPKP5Y-yIX3FlO0993bKxQfuOI'),d('13sP50imV8GvvuMzk7tHZZkeoa1jN5ovD'),d('1-MDFcnbhuUnPjd2jRbMC6Eqk4Vwg5Ijc'),d('1kwUU9WT18pMjY5DD2Yiftqf2RoLNt2Dq')],
-  [d('1v-XqYb2d2kXs44zWvAp8OwlAsJI1nHNN'),d('1I9iEICwEWmKQ7yz4obGMHTBcSVEszYFp'),d('1kAkb7pqSVlxNaEkMx0dYOVVkC998Ig5w'),d('1cSZEbrOLXloOYwwl4nWZMKGJHxsMgFPx')],
-  [d('1DejemvpgDNdI8DoMK8eaKuvgShdQL4FK'),d('11ZzpxuZVLWFcW8IbRSZ17Ef3lsgpei1A'),d('1Uzw47UwHTH8YBHUqYP6k7nCaG9fMzCw7'),d('1fYq18EZTH8cuYjYylvO3O1v6hoUj89H3')],
-  [d('1PqjQpt-5rPQKFXOZR6yHhhhwoOvJyp0_'),d('14pQ4egSF_Pd7VY_85CLg-53zglssajHu'),d('1cvPgBonOEnuYeyC3wZxdLifzOtjckCSj'),d('1_R9Xt9SayLPslyLeYCZgSOtms-4m-A6q')]
+/* Галерея серій. Перше фото в кожному масиві — обкладинка. */
+const WORKS = [
+  [
+    './assets/images/ph1/IMG_1.JPG',
+    './assets/images/ph1/IMG_2.JPG',
+    './assets/images/ph1/IMG_3.JPG',
+    './assets/images/ph1/IMG_4.JPG',
+    './assets/images/ph1/IMG_5.JPG'
+  ],
+
+  [
+    './assets/images/ph2/IMG_1.JPG',
+    './assets/images/ph2/IMG_2.JPG',
+    './assets/images/ph2/IMG_3.JPG',
+    './assets/images/ph2/IMG_4.JPG',
+    './assets/images/ph2/IMG_5.JPG'
+  ],
+
+  [
+    './assets/images/ph3/IMG_1.jpg',
+    './assets/images/ph3/IMG_2.JPG',
+    './assets/images/ph3/IMG_3.JPG',
+    './assets/images/ph3/IMG_4.JPG',
+    './assets/images/ph3/IMG_5.JPG'
+  ],
+
+  [
+    './assets/images/ph4/IMG_1.JPG',
+    './assets/images/ph4/IMG_2.JPG',
+    './assets/images/ph4/IMG_3.JPG',
+    './assets/images/ph4/IMG_4.JPG',
+    './assets/images/ph4/IMG_5.JPG'
+  ]
 ];
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbThumbs=document.getElementById('lbThumbs');
 let cur=[],idx=0,opener=null;
